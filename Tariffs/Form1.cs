@@ -38,19 +38,35 @@ namespace Tariffs
 
             if (!File.Exists("list.txt"))
             {
-                _ = File.Create("list.txt");
+                FileStream fstr = File.Create("list.txt");
+                fstr.Close();
             }
 
             try
             {
-                client.DownloadFile(remoteFile, "list.txt");
+                if (File.Exists("list.txt"))
+                {
+                    String boxres = MessageBox.Show("Обновить кэшированный файл с тарифами?",
+                                                    "Вопрос",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Information).ToString();
+
+                    if (boxres == "Yes")
+                    {
+                        client.DownloadFile(remoteFile, "list.txt");
+                    }
+                }
+                else
+                {
+                    client.DownloadFile(remoteFile, "list.txt");
+                }
             }
             catch (WebException)
             {
                 String clickedButton = MessageBox.Show("Не удалось получить сведения о тарифах с сервера.\n" +
                                                        "Поиск кэшированного файла...",
                                                        "Ошибка", MessageBoxButtons.AbortRetryIgnore,
-                                                       MessageBoxIcon.Error).ToString();
+                                                       MessageBoxIcon.Warning).ToString();
 
                 if (clickedButton == "Abort")
                 {
@@ -80,11 +96,11 @@ namespace Tariffs
                         if (!(firstcode == "Tariffs"))
                         {
                             _ = MessageBox.Show("Неверный тип файла!\n\n" + 
-                                            "Так как невозможно загрузить тарифы,\n" + 
-                                            "Приложение будет закрыто.",
-                                            "Ошибка",
-                                            MessageBoxButtons.OK,
-                                            MessageBoxIcon.Warning);
+                                                "Так как невозможно загрузить тарифы,\n" + 
+                                                "Приложение будет закрыто.",
+                                                "Ошибка",
+                                                MessageBoxButtons.OK,
+                                                MessageBoxIcon.Warning);
                             s.Close();
                             Close();
                         }
@@ -103,6 +119,33 @@ namespace Tariffs
             }
 
             StreamReader listfile = new StreamReader("list.txt");
+            String firststr = listfile.ReadLine();
+            String[][] tariffsArr = new String[50, 7];
+            String line = "";
+            int i = 0;
+
+            if (!(firststr == "Tariffs"))
+            {
+                MessageBox.Show("Неверный тип файла!\n\n" +
+                                "Так как невозможно загрузить тарифы,\n" +
+                                "приложение будет закрыто.",
+                                "Ошибка",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                listfile.Close();
+                Close();
+            }
+
+            while ((line = listfile.ReadLine()) != null)
+            {
+                if (!line.StartsWith("#"))
+                {
+                    tariffsArr[i] = line.Split(new char[] {','});
+                }
+
+                i++;
+            }
+
             listfile.Close();
         }
     }

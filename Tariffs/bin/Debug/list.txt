@@ -1,0 +1,3 @@
+Tariffs
+#Operator,Tariff,          MINS,SMS,MMS,  GB,pay
+MegaFon,Включайся!Открывай,250,200,9.9руб,2,280
