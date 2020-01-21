@@ -33,6 +33,7 @@ namespace Tariffs
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            int arrlenght = 50;
             WebClient client = new WebClient();
             String remoteFile = "https://tariffslist.000webhostapp.com/list.txt";
 
@@ -120,8 +121,8 @@ namespace Tariffs
 
             StreamReader listfile = new StreamReader("list.txt");
             String firststr = listfile.ReadLine();
-            String[][] tariffsArr = new String[50, 7];
-            String line = "";
+            String[,] tariffsArr = new String[arrlenght, 8];
+            String line;
             int i = 0;
 
             if (!(firststr == "Tariffs"))
@@ -136,17 +137,36 @@ namespace Tariffs
                 Close();
             }
 
-            while ((line = listfile.ReadLine()) != null)
+            line = listfile.ReadLine();
+
+            while (line != "End")
             {
-                if (!line.StartsWith("#"))
+                if (!(line.StartsWith("#")) && line != "" && line != null)
                 {
-                    tariffsArr[i] = line.Split(new char[] {','});
+                    for (int ind = 1; ind < 7; ind++)
+                    {
+                        tariffsArr[i, ind] = line.Split(new char[] { ',' })[ind];
+                    }
                 }
 
+                line = listfile.ReadLine();
                 i++;
             }
 
+            for (int rowind = 0; rowind < 50; rowind++)
+            {
+                tariffsArr[rowind, 0] = "false";
+            }
+
             listfile.Close();
+
+            for (int j = 0; j < arrlenght; j++)
+            {
+                for (int k = 0; k < 8; k++)
+                {
+                    _ = dataGridView1.Rows.Add(tariffsArr[j, k]);
+                }
+            }
         }
     }
 }

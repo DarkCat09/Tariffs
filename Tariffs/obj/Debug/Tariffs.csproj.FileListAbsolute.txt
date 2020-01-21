@@ -18,3 +18,13 @@ C:\Users\Acer\VisualStudio\source\repos\Tariff\Tariffs\obj\Debug\Tariffs.Propert
 C:\Users\Acer\VisualStudio\source\repos\Tariff\Tariffs\obj\Debug\Tariffs.csproj.GenerateResource.cache
 C:\Users\Acer\VisualStudio\source\repos\Tariff\Tariffs\obj\Debug\Tariffs.exe
 C:\Users\Acer\VisualStudio\source\repos\Tariff\Tariffs\obj\Debug\Tariffs.pdb
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\bin\Debug\Tariffs.exe.config
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\bin\Debug\Tariffs.exe
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\bin\Debug\Tariffs.pdb
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.csprojAssemblyReference.cache
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.Form1.resources
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.ProgramHelp.resources
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.Properties.Resources.resources
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.csproj.GenerateResource.cache
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.exe
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.pdb
