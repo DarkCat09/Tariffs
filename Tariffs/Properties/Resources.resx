@@ -121,4 +121,20 @@
     <value>Справка "О нас" ещё не готова!</value>
     <comment>Help "About Us" Is Not Ready Yet</comment>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logotip_beeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logotip-beeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logotip_megafon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logotip-megafon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logotip_mts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logotip-mts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logotip_tele2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logotip-tele2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logotip_tinkoff_mobile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logotip-tinkoff_mobile_removedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

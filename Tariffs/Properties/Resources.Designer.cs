@@ -68,5 +68,55 @@ namespace Tariffs.Properties {
                 return ResourceManager.GetString("helpAboutUsNotReady", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logotip_beeline {
+            get {
+                object obj = ResourceManager.GetObject("logotip_beeline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logotip_megafon {
+            get {
+                object obj = ResourceManager.GetObject("logotip_megafon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logotip_mts {
+            get {
+                object obj = ResourceManager.GetObject("logotip_mts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logotip_tele2 {
+            get {
+                object obj = ResourceManager.GetObject("logotip_tele2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logotip_tinkoff_mobile {
+            get {
+                object obj = ResourceManager.GetObject("logotip_tinkoff_mobile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

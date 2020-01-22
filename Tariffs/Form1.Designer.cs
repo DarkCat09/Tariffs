@@ -302,56 +302,85 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = global::Tariffs.Properties.Resources.logotip_megafon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(228, 139);
             this.button1.TabIndex = 0;
             this.button1.Text = "MegaFon";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackgroundImage = global::Tariffs.Properties.Resources.logotip_mts;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(237, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(251, 139);
             this.button2.TabIndex = 1;
             this.button2.Text = "MTS";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.BackgroundImage = global::Tariffs.Properties.Resources.logotip_beeline;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button3.Location = new System.Drawing.Point(494, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(233, 139);
             this.button3.TabIndex = 2;
             this.button3.Text = "BeeLine";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
+            this.button4.BackgroundImage = global::Tariffs.Properties.Resources.logotip_tele2;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(3, 148);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(228, 136);
             this.button4.TabIndex = 3;
             this.button4.Text = "Tele2";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
+            this.button5.BackgroundImage = global::Tariffs.Properties.Resources.logotip_tinkoff_mobile;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(237, 148);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(251, 136);
             this.button5.TabIndex = 4;
             this.button5.Text = "Tinkoff Mobile";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
+            this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.Location = new System.Drawing.Point(494, 148);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(233, 136);
             this.button6.TabIndex = 5;
             this.button6.Text = "GitHub - Страница проекта";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = true;
             // 
             // Form1

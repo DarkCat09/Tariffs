@@ -145,7 +145,7 @@ namespace Tariffs
                 {
                     for (int ind = 1; ind < 7; ind++)
                     {
-                        tariffsArr[i, ind] = line.Split(new char[] { ',' })[ind];
+                        tariffsArr[i, ind] = line.Split(new char[] { ',' })[ind-1];
                     }
                 }
 
@@ -160,13 +160,47 @@ namespace Tariffs
 
             listfile.Close();
 
-            for (int j = 0; j < arrlenght; j++)
+            String[] rowsArray = new String[8];
+
+            for (int elind = 0; elind < 50; elind++)
             {
-                for (int k = 0; k < 8; k++)
+                for (int propind = 0; propind < 8; propind++)
                 {
-                    _ = dataGridView1.Rows.Add(tariffsArr[j, k]);
+                    rowsArray[propind] = tariffsArr[elind, propind];
                 }
+                _ = dataGridView1.Rows.Add(rowsArray);
             }
+        }
+
+        private void openBrowser(String operatorsUrl)
+        {
+            Browser b = new Browser(operatorsUrl);
+            b.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openBrowser("https://www.megafon.ru/");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openBrowser("https://www.mts.ru/");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openBrowser("https://www.beeline.ru/");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            openBrowser("https://www.tele2.ru/");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openBrowser("https://www.tinkoff.ru/mobile-operator/");
         }
     }
 }

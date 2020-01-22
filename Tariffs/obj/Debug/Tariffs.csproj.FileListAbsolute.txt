@@ -28,3 +28,4 @@ C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.Proper
 C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.csproj.GenerateResource.cache
 C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.exe
 C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.pdb
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.Browser.resources

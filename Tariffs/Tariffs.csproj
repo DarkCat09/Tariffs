@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browser.Designer.cs">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
       <DependentUpon>ProgramHelp.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Browser.resx">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +97,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logotip-beeline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logotip-megafon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logotip-mts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logotip-tele2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logotip-tinkoff_mobile_removedbg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
