@@ -7,6 +7,22 @@ namespace Tariffs
 {
     public partial class Form1 : Form
     {
+        private int arrlenght = 50;
+
+        private struct Filter
+        {
+            String[] operators;
+
+            int min_minutes;
+            int max_minutes;
+
+            int min_sms;
+            int max_sms;
+
+            int min_pay;
+            int max_pay;
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +49,6 @@ namespace Tariffs
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int arrlenght = 50;
             WebClient client = new WebClient();
             String remoteFile = "https://tariffslist.000webhostapp.com/list.txt";
 
@@ -119,6 +134,11 @@ namespace Tariffs
                 }
             }
 
+            ReadListFile();
+        }
+
+        private void ReadListFile()
+        {
             StreamReader listfile = new StreamReader("list.txt");
             String firststr = listfile.ReadLine();
             String[,] tariffsArr = new String[arrlenght, 8];
@@ -145,7 +165,65 @@ namespace Tariffs
                 {
                     for (int ind = 1; ind < 7; ind++)
                     {
-                        tariffsArr[i, ind] = line.Split(new char[] { ',' })[ind-1];
+                        tariffsArr[i, ind] = line.Split(new char[] { ',' })[ind - 1];
+                    }
+                }
+
+                line = listfile.ReadLine();
+                i++;
+            }
+
+            for (int rowind = 0; rowind < 50; rowind++)
+            {
+                tariffsArr[rowind, 0] = "false";
+            }
+
+            listfile.Close();
+
+            String[] rowsArray = new String[8];
+
+            dataGridView1.Rows.Clear();
+
+            for (int elind = 0; elind < 50; elind++)
+            {
+                for (int propind = 0; propind < 8; propind++)
+                {
+                    rowsArray[propind] = tariffsArr[elind, propind];
+                }
+                _ = dataGridView1.Rows.Add(rowsArray);
+            }
+        }
+
+        private void ReadListFile(Filter filt_params)
+        {
+            StreamReader listfile = new StreamReader("list.txt");
+            String firststr = listfile.ReadLine();
+            String[,] tariffsArr = new String[arrlenght, 8];
+            String line;
+            int propind = 0;
+            int i = 0;
+
+            if (!(firststr == "Tariffs"))
+            {
+                MessageBox.Show("Неверный тип файла!\n\n" +
+                                "Так как невозможно загрузить тарифы,\n" +
+                                "приложение будет закрыто.",
+                                "Ошибка",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                listfile.Close();
+                Close();
+            }
+
+            line = listfile.ReadLine();
+
+            while (line != "End")
+            {
+                if (!(line.StartsWith("#")) && line != "" && line != null)
+                {
+                    for (int ind = 1; ind < 7; ind++)
+                    {
+                        tariffsArr[i, ind] = line.Split(new char[] { ',' })[ind - 1];
                     }
                 }
 
@@ -164,9 +242,10 @@ namespace Tariffs
 
             for (int elind = 0; elind < 50; elind++)
             {
-                for (int propind = 0; propind < 8; propind++)
+                while (propind < 8)
                 {
                     rowsArray[propind] = tariffsArr[elind, propind];
+                    propind++;
                 }
                 _ = dataGridView1.Rows.Add(rowsArray);
             }
@@ -201,6 +280,11 @@ namespace Tariffs
         private void button5_Click(object sender, EventArgs e)
         {
             openBrowser("https://www.tinkoff.ru/mobile-operator/");
+        }
+
+        private void обновитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReadListFile();
         }
     }
 }
