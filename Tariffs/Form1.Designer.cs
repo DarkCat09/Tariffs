@@ -33,6 +33,7 @@
             this.тарифToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фильтрацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.параметрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.регионToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,7 +88,6 @@
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button7 = new System.Windows.Forms.Button();
-            this.фильтрацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -129,7 +129,7 @@
             // обновитьToolStripMenuItem
             // 
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
-            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.обновитьToolStripMenuItem.Text = "Обновить";
             this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
             // 
@@ -138,13 +138,19 @@
             this.фильтрToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.фильтрацияToolStripMenuItem});
             this.фильтрToolStripMenuItem.Name = "фильтрToolStripMenuItem";
-            this.фильтрToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фильтрToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.фильтрToolStripMenuItem.Text = "Фильтр";
+            // 
+            // фильтрацияToolStripMenuItem
+            // 
+            this.фильтрацияToolStripMenuItem.Name = "фильтрацияToolStripMenuItem";
+            this.фильтрацияToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.фильтрацияToolStripMenuItem.Text = "Фильтрация";
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.CloseProgram);
             // 
@@ -308,7 +314,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(775, 287);
+            this.tabPage2.Size = new System.Drawing.Size(760, 287);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Сравнение";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -318,7 +324,7 @@
             this.tabPage3.Controls.Add(this.tableLayoutPanel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(775, 287);
+            this.tabPage3.Size = new System.Drawing.Size(760, 287);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Панель сайтов";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -328,7 +334,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.62886F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.37114F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 239F));
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
@@ -351,7 +357,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 139);
+            this.button1.Size = new System.Drawing.Size(227, 139);
             this.button1.TabIndex = 0;
             this.button1.Text = "MegaFon";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -363,7 +369,7 @@
             this.button2.BackgroundImage = global::Tariffs.Properties.Resources.logotip_mts;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(237, 3);
+            this.button2.Location = new System.Drawing.Point(236, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(251, 139);
             this.button2.TabIndex = 1;
@@ -378,7 +384,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(494, 3);
+            this.button3.Location = new System.Drawing.Point(493, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(233, 139);
             this.button3.TabIndex = 2;
@@ -394,7 +400,7 @@
             this.button4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(3, 148);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(228, 136);
+            this.button4.Size = new System.Drawing.Size(227, 136);
             this.button4.TabIndex = 3;
             this.button4.Text = "Tele2";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -406,7 +412,7 @@
             this.button5.BackgroundImage = global::Tariffs.Properties.Resources.logotip_tinkoff_mobile;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(237, 148);
+            this.button5.Location = new System.Drawing.Point(236, 148);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(251, 136);
             this.button5.TabIndex = 4;
@@ -418,7 +424,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(494, 148);
+            this.button6.Location = new System.Drawing.Point(493, 148);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(233, 136);
             this.button6.TabIndex = 5;
@@ -740,12 +746,7 @@
             this.button7.TabIndex = 56;
             this.button7.Text = "Фильтрация";
             this.button7.UseVisualStyleBackColor = true;
-            // 
-            // фильтрацияToolStripMenuItem
-            // 
-            this.фильтрацияToolStripMenuItem.Name = "фильтрацияToolStripMenuItem";
-            this.фильтрацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.фильтрацияToolStripMenuItem.Text = "Фильтрация";
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form1
             // 
