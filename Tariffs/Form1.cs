@@ -8,6 +8,7 @@ namespace Tariffs
     public partial class Form1 : Form
     {
         private int arrlenght = 50;
+        int opersQuan = 4;
 
         public struct Filter
         {
@@ -82,9 +83,9 @@ namespace Tariffs
             }
             catch (WebException)
             {
-                String clickedButton = MessageBox.Show("Не удалось получить сведения о тарифах с сервера.\n" +
+                String clickedButton = MessageBox.Show("Не удалось получить сведения о тарифах с сервера!\n" +
                                                        "Поиск кэшированного файла...",
-                                                       "Ошибка", MessageBoxButtons.AbortRetryIgnore,
+                                                       "Предупреждение", MessageBoxButtons.AbortRetryIgnore,
                                                        MessageBoxIcon.Warning).ToString();
 
                 if (clickedButton == "Abort")
@@ -203,13 +204,33 @@ namespace Tariffs
                 }
 
                 bool needToAdd = true;
+                bool[] operMatch = new bool[opersQuan];
                 int x;
+
+                //operators
+                /*for (int curOperInd = 0; curOperInd < opersQuan; curOperInd++)
+                {
+                    if (filt_params.operators != null &&
+                        rowsArray[1] != null &&
+                        rowsArray[1] == filt_params.operators[curOperInd])
+                    {
+                        operMatch[curOperInd] = true;
+                    }
+                }
+
+                for (int curOperInd = 0; curOperInd < opersQuan; curOperInd++)
+                {
+                    if (operMatch[curOperInd])
+                    {
+                        needToAdd = true;
+                    }
+                }*/
 
                 //mins
                 if (filt_params.min_minutes > 0 &&
                     rowsArray[3] != null &&
                     Int32.TryParse(rowsArray[3], out x) &&
-                    Convert.ToInt32(rowsArray[3]) > filt_params.min_minutes)
+                    Convert.ToInt32(rowsArray[3]) < filt_params.min_minutes)
                 {
                     needToAdd = false;
                 }
@@ -226,7 +247,7 @@ namespace Tariffs
                 if (filt_params.min_sms > 0 &&
                     rowsArray[4] != null &&
                     Int32.TryParse(rowsArray[4], out x) &&
-                    Convert.ToInt32(rowsArray[4]) > filt_params.min_sms)
+                    Convert.ToInt32(rowsArray[4]) < filt_params.min_sms)
                 {
                     needToAdd = false;
                 }
@@ -243,7 +264,7 @@ namespace Tariffs
                 if (filt_params.min_inet > 0 &&
                     rowsArray[6] != null &&
                     Int32.TryParse(rowsArray[6], out x) &&
-                    Convert.ToInt32(rowsArray[6]) > filt_params.min_inet)
+                    Convert.ToInt32(rowsArray[6]) < filt_params.min_inet)
                 {
                     needToAdd = false;
                 }
@@ -260,7 +281,7 @@ namespace Tariffs
                 if (filt_params.min_pay > 0 &&
                     rowsArray[7] != null &&
                     Int32.TryParse(rowsArray[7], out x) &&
-                    Convert.ToInt32(rowsArray[7]) > filt_params.min_pay)
+                    Convert.ToInt32(rowsArray[7]) < filt_params.min_pay)
                 {
                     needToAdd = false;
                 }
@@ -320,7 +341,23 @@ namespace Tariffs
         private void button7_Click(object sender, EventArgs e)
         {
             Filter filt = new Filter();
-            filt.max_minutes = Convert.ToInt32(numericUpDown1.Value);
+
+            //minutes
+            filt.min_minutes = Convert.ToInt32(numericUpDown1.Value);
+            filt.max_minutes = Convert.ToInt32(numericUpDown2.Value);
+
+            //sms - short message service
+            filt.min_sms = Convert.ToInt32(numericUpDown3.Value);
+            filt.max_sms = Convert.ToInt32(numericUpDown4.Value);
+
+            //internet
+            filt.min_inet = Convert.ToInt32(numericUpDown5.Value);
+            filt.max_inet = Convert.ToInt32(numericUpDown6.Value);
+
+            //pay
+            filt.min_pay = Convert.ToInt32(numericUpDown7.Value);
+            filt.max_pay = Convert.ToInt32(numericUpDown8.Value);
+
             ReadListFile(filt);
         }
     }
