@@ -88,10 +88,19 @@
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button7 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.OperatorCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TariffCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MinsCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SmsCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MmsCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InetCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PayCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
@@ -102,6 +111,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -259,6 +269,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(764, 287);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CheckColComparing);
             // 
             // toCompare
             // 
@@ -311,6 +322,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -334,7 +346,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.62886F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.37114F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
@@ -357,7 +369,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(227, 139);
+            this.button1.Size = new System.Drawing.Size(226, 139);
             this.button1.TabIndex = 0;
             this.button1.Text = "MegaFon";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -369,7 +381,7 @@
             this.button2.BackgroundImage = global::Tariffs.Properties.Resources.logotip_mts;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(236, 3);
+            this.button2.Location = new System.Drawing.Point(235, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(250, 139);
             this.button2.TabIndex = 1;
@@ -384,7 +396,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(492, 3);
+            this.button3.Location = new System.Drawing.Point(491, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(233, 139);
             this.button3.TabIndex = 2;
@@ -400,7 +412,7 @@
             this.button4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(3, 148);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(227, 136);
+            this.button4.Size = new System.Drawing.Size(226, 136);
             this.button4.TabIndex = 3;
             this.button4.Text = "Tele2";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -412,7 +424,7 @@
             this.button5.BackgroundImage = global::Tariffs.Properties.Resources.logotip_tinkoff_mobile;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(236, 148);
+            this.button5.Location = new System.Drawing.Point(235, 148);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(250, 136);
             this.button5.TabIndex = 4;
@@ -424,7 +436,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(492, 148);
+            this.button6.Location = new System.Drawing.Point(491, 148);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(233, 136);
             this.button6.TabIndex = 5;
@@ -709,10 +721,10 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            "Мегафон",
-            "Билайн",
-            "МТС",
-            "Теле2"});
+            "MegaFon",
+            "BeeLine",
+            "MTS",
+            "Tele2"});
             this.checkedListBox1.Location = new System.Drawing.Point(74, 27);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(120, 64);
@@ -727,6 +739,58 @@
             this.button7.Text = "Фильтрация";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OperatorCmpCol,
+            this.TariffCmpCol,
+            this.MinsCmpCol,
+            this.SmsCmpCol,
+            this.MmsCmpCol,
+            this.InetCmpCol,
+            this.PayCmpCol});
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(760, 287);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // OperatorCmpCol
+            // 
+            this.OperatorCmpCol.HeaderText = "Оператор";
+            this.OperatorCmpCol.Name = "OperatorCmpCol";
+            // 
+            // TariffCmpCol
+            // 
+            this.TariffCmpCol.HeaderText = "Тариф";
+            this.TariffCmpCol.Name = "TariffCmpCol";
+            this.TariffCmpCol.Width = 130;
+            // 
+            // MinsCmpCol
+            // 
+            this.MinsCmpCol.HeaderText = "Звонки (мин)";
+            this.MinsCmpCol.Name = "MinsCmpCol";
+            // 
+            // SmsCmpCol
+            // 
+            this.SmsCmpCol.HeaderText = "SMS";
+            this.SmsCmpCol.Name = "SmsCmpCol";
+            // 
+            // MmsCmpCol
+            // 
+            this.MmsCmpCol.HeaderText = "MMS";
+            this.MmsCmpCol.Name = "MmsCmpCol";
+            // 
+            // InetCmpCol
+            // 
+            this.InetCmpCol.HeaderText = "Интернет (МБ/ГБ)";
+            this.InetCmpCol.Name = "InetCmpCol";
+            // 
+            // PayCmpCol
+            // 
+            this.PayCmpCol.HeaderText = "Абон. плата";
+            this.PayCmpCol.Name = "PayCmpCol";
             // 
             // Form1
             // 
@@ -768,6 +832,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
@@ -778,6 +843,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -844,6 +910,14 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ToolStripMenuItem фильтрацияToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OperatorCmpCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TariffCmpCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MinsCmpCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SmsCmpCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MmsCmpCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InetCmpCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PayCmpCol;
     }
 }
 

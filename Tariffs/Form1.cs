@@ -150,6 +150,8 @@ namespace Tariffs
         {
             dataGridView1.Rows.Clear();
             dataGridView1.RowCount = 1;
+            dataGridView2.Rows.Clear();
+            dataGridView2.RowCount = 1;
             StreamReader listfile = new StreamReader("list.txt");
             String firststr = listfile.ReadLine();
             String[,] tariffsArr = new String[arrlenght, 8];
@@ -208,23 +210,21 @@ namespace Tariffs
                 int x;
 
                 //operators
-                /*for (int curOperInd = 0; curOperInd < opersQuan; curOperInd++)
+                bool myOperatorChecked = false;
+                for (int curOperInd = 0; curOperInd < opersQuan; curOperInd++)
                 {
                     if (filt_params.operators != null &&
                         rowsArray[1] != null &&
                         rowsArray[1] == filt_params.operators[curOperInd])
                     {
-                        operMatch[curOperInd] = true;
+                        myOperatorChecked = true;
                     }
                 }
 
-                for (int curOperInd = 0; curOperInd < opersQuan; curOperInd++)
+                if (!myOperatorChecked && filt_params.operators != null)
                 {
-                    if (operMatch[curOperInd])
-                    {
-                        needToAdd = true;
-                    }
-                }*/
+                    needToAdd = false;
+                }
 
                 //mins
                 if (filt_params.min_minutes > 0 &&
@@ -337,10 +337,17 @@ namespace Tariffs
         {
             ReadListFile();
         }
-
+        
         private void button7_Click(object sender, EventArgs e)
         {
             Filter filt = new Filter();
+
+            //operators
+            filt.operators = new String[opersQuan];
+            for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++)
+            {
+                filt.operators[i] = checkedListBox1.CheckedItems[i].ToString();
+            }
 
             //minutes
             filt.min_minutes = Convert.ToInt32(numericUpDown1.Value);
@@ -359,6 +366,21 @@ namespace Tariffs
             filt.max_pay = Convert.ToInt32(numericUpDown8.Value);
 
             ReadListFile(filt);
+        }
+
+        private void CheckColComparing(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                String[] myRow = new String[8];
+
+                for (int i = 1; i < 8; i++)
+                {
+                    myRow[i - 1] = dataGridView1.Rows[e.RowIndex].Cells[i].Value.ToString();
+                }
+
+                dataGridView2.Rows.Add(myRow);
+            }
         }
     }
 }
