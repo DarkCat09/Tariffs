@@ -370,7 +370,10 @@ namespace Tariffs
 
         private void CheckColComparing(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0)
+            bool x;
+            if (e.ColumnIndex == 0 &&
+                Boolean.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), out x) &&
+                !x)
             {
                 String[] myRow = new String[8];
 
@@ -381,6 +384,12 @@ namespace Tariffs
 
                 dataGridView2.Rows.Add(myRow);
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Rows.Clear();
+            dataGridView2.RowCount = 1;
         }
     }
 }

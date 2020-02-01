@@ -57,6 +57,14 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.OperatorCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TariffCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MinsCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SmsCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MmsCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InetCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PayCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -88,19 +96,13 @@
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button7 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.OperatorCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TariffCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MinsCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SmsCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MmsCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InetCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PayCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button8 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
@@ -111,7 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -139,7 +140,7 @@
             // обновитьToolStripMenuItem
             // 
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
-            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.обновитьToolStripMenuItem.Text = "Обновить";
             this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
             // 
@@ -148,7 +149,7 @@
             this.фильтрToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.фильтрацияToolStripMenuItem});
             this.фильтрToolStripMenuItem.Name = "фильтрToolStripMenuItem";
-            this.фильтрToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.фильтрToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.фильтрToolStripMenuItem.Text = "Фильтр";
             // 
             // фильтрацияToolStripMenuItem
@@ -160,7 +161,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.CloseProgram);
             // 
@@ -180,7 +181,7 @@
             this.нижегородскаяОбластьToolStripMenuItem,
             this.ульяновскаяОбластьToolStripMenuItem});
             this.регионToolStripMenuItem.Name = "регионToolStripMenuItem";
-            this.регионToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.регионToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.регионToolStripMenuItem.Text = "Регион";
             // 
             // московскаяОбластьToolStripMenuItem
@@ -219,14 +220,14 @@
             // оНасToolStripMenuItem
             // 
             this.оНасToolStripMenuItem.Name = "оНасToolStripMenuItem";
-            this.оНасToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.оНасToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.оНасToolStripMenuItem.Text = "О нас";
             this.оНасToolStripMenuItem.Click += new System.EventHandler(this.оНасToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -331,6 +332,58 @@
             this.tabPage2.Text = "Сравнение";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OperatorCmpCol,
+            this.TariffCmpCol,
+            this.MinsCmpCol,
+            this.SmsCmpCol,
+            this.MmsCmpCol,
+            this.InetCmpCol,
+            this.PayCmpCol});
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(760, 287);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // OperatorCmpCol
+            // 
+            this.OperatorCmpCol.HeaderText = "Оператор";
+            this.OperatorCmpCol.Name = "OperatorCmpCol";
+            // 
+            // TariffCmpCol
+            // 
+            this.TariffCmpCol.HeaderText = "Тариф";
+            this.TariffCmpCol.Name = "TariffCmpCol";
+            this.TariffCmpCol.Width = 130;
+            // 
+            // MinsCmpCol
+            // 
+            this.MinsCmpCol.HeaderText = "Звонки (мин)";
+            this.MinsCmpCol.Name = "MinsCmpCol";
+            // 
+            // SmsCmpCol
+            // 
+            this.SmsCmpCol.HeaderText = "SMS";
+            this.SmsCmpCol.Name = "SmsCmpCol";
+            // 
+            // MmsCmpCol
+            // 
+            this.MmsCmpCol.HeaderText = "MMS";
+            this.MmsCmpCol.Name = "MmsCmpCol";
+            // 
+            // InetCmpCol
+            // 
+            this.InetCmpCol.HeaderText = "Интернет (МБ/ГБ)";
+            this.InetCmpCol.Name = "InetCmpCol";
+            // 
+            // PayCmpCol
+            // 
+            this.PayCmpCol.HeaderText = "Абон. плата";
+            this.PayCmpCol.Name = "PayCmpCol";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.tableLayoutPanel1);
@@ -346,7 +399,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.62886F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.37114F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
@@ -383,7 +436,7 @@
             this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(235, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 139);
+            this.button2.Size = new System.Drawing.Size(249, 139);
             this.button2.TabIndex = 1;
             this.button2.Text = "MTS";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -396,7 +449,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(491, 3);
+            this.button3.Location = new System.Drawing.Point(490, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(233, 139);
             this.button3.TabIndex = 2;
@@ -426,7 +479,7 @@
             this.button5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(235, 148);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(250, 136);
+            this.button5.Size = new System.Drawing.Size(249, 136);
             this.button5.TabIndex = 4;
             this.button5.Text = "Tinkoff Mobile";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -436,7 +489,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(491, 148);
+            this.button6.Location = new System.Drawing.Point(490, 148);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(233, 136);
             this.button6.TabIndex = 5;
@@ -732,71 +785,30 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(92, 262);
+            this.button7.Location = new System.Drawing.Point(15, 262);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(86, 23);
+            this.button7.Size = new System.Drawing.Size(163, 23);
             this.button7.TabIndex = 56;
             this.button7.Text = "Фильтрация";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // dataGridView2
+            // button8
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.OperatorCmpCol,
-            this.TariffCmpCol,
-            this.MinsCmpCol,
-            this.SmsCmpCol,
-            this.MmsCmpCol,
-            this.InetCmpCol,
-            this.PayCmpCol});
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(760, 287);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // OperatorCmpCol
-            // 
-            this.OperatorCmpCol.HeaderText = "Оператор";
-            this.OperatorCmpCol.Name = "OperatorCmpCol";
-            // 
-            // TariffCmpCol
-            // 
-            this.TariffCmpCol.HeaderText = "Тариф";
-            this.TariffCmpCol.Name = "TariffCmpCol";
-            this.TariffCmpCol.Width = 130;
-            // 
-            // MinsCmpCol
-            // 
-            this.MinsCmpCol.HeaderText = "Звонки (мин)";
-            this.MinsCmpCol.Name = "MinsCmpCol";
-            // 
-            // SmsCmpCol
-            // 
-            this.SmsCmpCol.HeaderText = "SMS";
-            this.SmsCmpCol.Name = "SmsCmpCol";
-            // 
-            // MmsCmpCol
-            // 
-            this.MmsCmpCol.HeaderText = "MMS";
-            this.MmsCmpCol.Name = "MmsCmpCol";
-            // 
-            // InetCmpCol
-            // 
-            this.InetCmpCol.HeaderText = "Интернет (МБ/ГБ)";
-            this.InetCmpCol.Name = "InetCmpCol";
-            // 
-            // PayCmpCol
-            // 
-            this.PayCmpCol.HeaderText = "Абон. плата";
-            this.PayCmpCol.Name = "PayCmpCol";
+            this.button8.Location = new System.Drawing.Point(15, 291);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(163, 23);
+            this.button8.TabIndex = 57;
+            this.button8.Text = "Очистить список сравнения";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 352);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.numericUpDown6);
@@ -833,6 +845,7 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
@@ -843,7 +856,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -918,6 +930,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MmsCmpCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn InetCmpCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn PayCmpCol;
+        private System.Windows.Forms.Button button8;
     }
 }
 
