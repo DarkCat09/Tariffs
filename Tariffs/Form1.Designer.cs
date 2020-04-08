@@ -47,15 +47,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.toCompare = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.OperatorCmpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +88,14 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.toCompare = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -140,7 +139,7 @@
             // обновитьToolStripMenuItem
             // 
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
-            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.обновитьToolStripMenuItem.Text = "Обновить";
             this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
             // 
@@ -149,7 +148,7 @@
             this.фильтрToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.фильтрацияToolStripMenuItem});
             this.фильтрToolStripMenuItem.Name = "фильтрToolStripMenuItem";
-            this.фильтрToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фильтрToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.фильтрToolStripMenuItem.Text = "Фильтр";
             // 
             // фильтрацияToolStripMenuItem
@@ -161,7 +160,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.CloseProgram);
             // 
@@ -181,7 +180,7 @@
             this.нижегородскаяОбластьToolStripMenuItem,
             this.ульяновскаяОбластьToolStripMenuItem});
             this.регионToolStripMenuItem.Name = "регионToolStripMenuItem";
-            this.регионToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.регионToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.регионToolStripMenuItem.Text = "Регион";
             // 
             // московскаяОбластьToolStripMenuItem
@@ -220,14 +219,14 @@
             // оНасToolStripMenuItem
             // 
             this.оНасToolStripMenuItem.Name = "оНасToolStripMenuItem";
-            this.оНасToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оНасToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оНасToolStripMenuItem.Text = "О нас";
             this.оНасToolStripMenuItem.Click += new System.EventHandler(this.оНасToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -264,62 +263,12 @@
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7,
-            this.Column8});
+            this.Column7});
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(764, 287);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CheckColComparing);
-            // 
-            // toCompare
-            // 
-            this.toCompare.HeaderText = "CMP";
-            this.toCompare.Name = "toCompare";
-            this.toCompare.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.toCompare.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.toCompare.ToolTipText = "Сравнение";
-            this.toCompare.Width = 35;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Оператор";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Тариф";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Звонки (мин)";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "SMS";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "MMS";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Интернет (МБ/ГБ)";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Абон. плата";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Правила";
-            this.Column8.Name = "Column8";
             // 
             // tabPage2
             // 
@@ -399,7 +348,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.62886F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.37114F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
@@ -422,7 +371,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(226, 139);
+            this.button1.Size = new System.Drawing.Size(225, 139);
             this.button1.TabIndex = 0;
             this.button1.Text = "MegaFon";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -434,7 +383,7 @@
             this.button2.BackgroundImage = global::Tariffs.Properties.Resources.logotip_mts;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(235, 3);
+            this.button2.Location = new System.Drawing.Point(234, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(249, 139);
             this.button2.TabIndex = 1;
@@ -449,7 +398,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(490, 3);
+            this.button3.Location = new System.Drawing.Point(489, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(233, 139);
             this.button3.TabIndex = 2;
@@ -465,7 +414,7 @@
             this.button4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(3, 148);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(226, 136);
+            this.button4.Size = new System.Drawing.Size(225, 136);
             this.button4.TabIndex = 3;
             this.button4.Text = "Tele2";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -477,7 +426,7 @@
             this.button5.BackgroundImage = global::Tariffs.Properties.Resources.logotip_tinkoff_mobile;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(235, 148);
+            this.button5.Location = new System.Drawing.Point(234, 148);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(249, 136);
             this.button5.TabIndex = 4;
@@ -489,7 +438,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(490, 148);
+            this.button6.Location = new System.Drawing.Point(489, 148);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(233, 136);
             this.button6.TabIndex = 5;
@@ -803,6 +752,57 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // toCompare
+            // 
+            this.toCompare.HeaderText = "CMP";
+            this.toCompare.Name = "toCompare";
+            this.toCompare.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.toCompare.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.toCompare.ToolTipText = "Сравнение";
+            this.toCompare.Width = 35;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Оператор";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Тариф";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Звонки (мин)";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "SMS";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "MMS";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Интернет (МБ/ГБ)";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Абон. плата";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -888,15 +888,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn toCompare;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown numericUpDown8;
         private System.Windows.Forms.Label label12;
@@ -931,6 +922,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn InetCmpCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn PayCmpCol;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn toCompare;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
 

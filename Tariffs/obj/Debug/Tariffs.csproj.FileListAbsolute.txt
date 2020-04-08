@@ -30,3 +30,4 @@ C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.exe
 C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.pdb
 C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.Browser.resources
 C:\Users\user\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.Browser.resources
+C:\Users\Acer\VisualStudio\source\repos\Tariffs\Tariffs\obj\Debug\Tariffs.csproj.CoreCompileInputs.cache

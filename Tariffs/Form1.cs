@@ -1,13 +1,14 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Tariffs
 {
     public partial class Form1 : Form
     {
-        private int arrlenght = 50;
+        //private int arrlenght = 50;
         int opersQuan = 4;
 
         public struct Filter
@@ -56,11 +57,12 @@ namespace Tariffs
             WebClient client = new WebClient();
             String remoteFile = "https://tariffslist.000webhostapp.com/list.txt";
 
+            /*
             if (!File.Exists("list.txt"))
             {
-                FileStream fstr = File.Create("list.txt");
-                fstr.Close();
+                
             }
+            */
 
             try
             {
@@ -78,6 +80,9 @@ namespace Tariffs
                 }
                 else
                 {
+                    FileStream fstr = File.Create("list.txt");
+                    fstr.Close();
+
                     client.DownloadFile(remoteFile, "list.txt");
                 }
             }
@@ -154,9 +159,11 @@ namespace Tariffs
             dataGridView2.RowCount = 1;
             StreamReader listfile = new StreamReader("list.txt");
             String firststr = listfile.ReadLine();
-            String[,] tariffsArr = new String[arrlenght, 8];
+            //String[,] tariffsArr = new String[arrlenght, 8];
+            List<Tariff> tariffsArr = new List<Tariff>();
+            
+            //int propind = 0;
             String line;
-            int propind = 0;
             int i = 0;
 
             if (!(firststr == "Tariffs"))
@@ -177,33 +184,54 @@ namespace Tariffs
             {
                 if (!(line.StartsWith("#")) && line != "" && line != null)
                 {
+                    Tariff receivedTariff = Tariff.CreateTariff(
+                        line.Split(new char[] { ',' })[0],
+                        line.Split(new char[] { ',' })[1],
+                        line.Split(new char[] { ',' })[2],
+                        line.Split(new char[] { ',' })[3],
+                        line.Split(new char[] { ',' })[4],
+                        line.Split(new char[] { ',' })[5],
+                        line.Split(new char[] { ',' })[6]);
+
+                    tariffsArr.Add(receivedTariff);
+
+                    /*
                     for (int ind = 1; ind < 8; ind++)
                     {
                         tariffsArr[i, ind] = line.Split(new char[] { ',' })[ind - 1];
                     }
+                    */
+                }
+                else
+                {
+                    i--;
                 }
 
                 line = listfile.ReadLine();
                 i++;
             }
 
+            /*
             for (int rowind = 0; rowind < i; rowind++)
             {
                 tariffsArr[rowind, 0] = "false";
             }
+            */
 
             listfile.Close();
 
             String[] rowsArray = new String[8];
 
-            for (int elind = 0; elind < i; elind++)
+            foreach (Tariff t in tariffsArr)
             {
-                propind = 0;
-                while (propind < 8)
-                {
-                    rowsArray[propind] = tariffsArr[elind, propind];
-                    propind++;
-                }
+                rowsArray[0] = "false";
+                rowsArray[1] = t.oper;
+                rowsArray[2] = t.name;
+                rowsArray[3] = t.mins;
+                rowsArray[4] = t.sms;
+                rowsArray[5] = t.mms;
+                rowsArray[6] = t.inet;
+                rowsArray[7] = t.pay;
 
                 bool needToAdd = true;
                 bool[] operMatch = new bool[opersQuan];

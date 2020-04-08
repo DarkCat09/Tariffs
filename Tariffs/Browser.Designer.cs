@@ -50,7 +50,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Browser";
             this.Text = "Browser";
-            this.Load += new System.EventHandler(this.Browser_Load);
             this.ResumeLayout(false);
 
         }
